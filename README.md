@@ -1,9 +1,8 @@
-
-# Portfólio 2026 — Sarah Keyse Soeiro
+# Portfólio 2026 — Suellen Miranda
 
 Meu portfólio pessoal, feito com **HTML, CSS e JavaScript** puro e publicado com o **GitHub Pages**.
 
-🔗 **Site no ar:** 
+🔗 **Site no ar:** https://suellenmiranda.github.io/Portfolio-2026/
 
 ## Seções
 
