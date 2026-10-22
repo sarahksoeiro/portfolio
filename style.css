@@ -131,6 +131,42 @@ svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width:
 .projeto h3 { padding: 18px 20px 4px; text-align: center; text-transform: uppercase; font-size: 1rem; }
 .projeto p { padding: 0 20px 22px; text-align: center; color: var(--cor-suave); font-size: 0.95rem; }
 
+/* ===== HABILIDADES (CARROSSEL) ===== */
+.carrossel { display: flex; align-items: center; gap: 12px; }
+.carrossel__trilho {
+  display: flex; gap: 18px; overflow-x: auto; scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; scrollbar-width: none; padding: 6px 2px; flex: 1;
+}
+.carrossel__trilho::-webkit-scrollbar { display: none; }
+.habilidade {
+  flex: 0 0 calc((100% - 54px) / 4); scroll-snap-align: start;
+  border: 1px solid var(--cor-borda); border-radius: var(--raio);
+  padding: 22px 18px; text-align: center; background: var(--cor-fundo);
+}
+.habilidade__icone { color: var(--cor-azul); display: grid; place-items: center; margin-bottom: 10px; }
+.habilidade h3 { font-size: 0.95rem; text-transform: uppercase; }
+.habilidade p { font-size: 0.85rem; color: var(--cor-suave); }
+.seta {
+  flex: 0 0 40px; height: 40px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--cor-borda); background: var(--cor-clara);
+  font-size: 1.6rem; line-height: 1; color: var(--cor-texto);
+}
+.seta:hover { background: var(--cor-roxo); color: #fff; border-color: var(--cor-roxo); }
+
+/* ===== CHAMADA ===== */
+.chamada { background: #e9e7f3; padding: 64px 0; text-align: center; }
+.chamada h2 { font-size: clamp(1.3rem, 3vw, 1.8rem); text-transform: uppercase; margin-bottom: 24px; }
+
+/* ===== RODAPÉ ===== */
+.rodape { background: var(--cor-clara); padding: 40px 0; border-top: 1px solid var(--cor-borda); }
+.rodape__conteudo { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.rodape .etiqueta { margin: 6px 0 12px; font-size: 0.85rem; }
+.copy { font-size: 0.85rem; color: var(--cor-suave); }
+.contatos { list-style: none; display: grid; gap: 10px; border-left: 2px solid var(--cor-borda); padding-left: 24px; }
+.contatos a { display: flex; align-items: center; gap: 10px; color: var(--cor-suave); }
+.contatos a:hover { color: var(--cor-roxo); }
+.contatos svg { width: 20px; height: 20px; }
+
 /* ===== CELULAR ===== */
 @media (max-width: 760px) {
   .secao, .apresentacao { padding: 56px 0; }
@@ -152,4 +188,8 @@ svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width:
   .sobre { grid-template-columns: 1fr; }
 
   .grade--2 { grid-template-columns: 1fr; }
+
+  .habilidade { flex-basis: 100%; }
+  .rodape__conteudo { flex-direction: column; }
+  .contatos { border-left: 0; padding-left: 0; }
 }
