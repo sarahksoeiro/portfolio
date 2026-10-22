@@ -115,6 +115,22 @@ svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width:
   display: grid; place-items: center; font-size: 0.8rem; font-weight: 700;
 }
 
+/* ===== PORTFÓLIO ===== */
+.grade--2 { grid-template-columns: repeat(2, 1fr); }
+.projeto {
+  background: var(--cor-clara); border-radius: var(--raio);
+  overflow: hidden; box-shadow: var(--sombra); transition: transform 0.2s;
+}
+.projeto:hover { transform: translateY(-4px); }
+.projeto__imagem { height: 190px; display: grid; place-items: center; color: #fff; }
+.projeto__imagem svg { width: 64px; height: 64px; }
+.projeto__imagem--1 { background: linear-gradient(135deg, #7c5cff, #4a7bdc); }
+.projeto__imagem--2 { background: linear-gradient(135deg, #4a7bdc, #34b3c9); }
+.projeto__imagem--3 { background: linear-gradient(135deg, #1f1f2e, #7c5cff); }
+.projeto__imagem--4 { background: linear-gradient(135deg, #b9a8ff, #9db8ef); }
+.projeto h3 { padding: 18px 20px 4px; text-align: center; text-transform: uppercase; font-size: 1rem; }
+.projeto p { padding: 0 20px 22px; text-align: center; color: var(--cor-suave); font-size: 0.95rem; }
+
 /* ===== CELULAR ===== */
 @media (max-width: 760px) {
   .secao, .apresentacao { padding: 56px 0; }
@@ -134,4 +150,6 @@ svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width:
 
   .grade--3 { grid-template-columns: 1fr; }
   .sobre { grid-template-columns: 1fr; }
+
+  .grade--2 { grid-template-columns: 1fr; }
 }
