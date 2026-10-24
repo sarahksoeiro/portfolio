@@ -11,3 +11,14 @@ menuBotao.addEventListener("click", () => {
 menu.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => menu.classList.remove("aberto"));
 });
+
+// Carrossel de habilidades: as setas rolam os cards
+const trilho = document.querySelector(".carrossel__trilho");
+const passo = () => trilho.querySelector(".habilidade").offsetWidth + 18;
+
+document.querySelector(".seta--esq").addEventListener("click", () => {
+  trilho.scrollBy({ left: -passo() });
+});
+document.querySelector(".seta--dir").addEventListener("click", () => {
+  trilho.scrollBy({ left: passo() });
+});
